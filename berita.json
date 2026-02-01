@@ -3,7 +3,7 @@
     "kategori": "PEMBINAAN",
     "judul": "Cinta Alam Indonesia (CAI) 2026",
     "ringkasan": "Keseruan generus Wonogiri Timur 4 dalam membina kemandirian...",
-    "gambar": "https://ppgwontim4.github.io/database/kegiatan1.jpg",
+    "gambar": "kegiatan1.jpg",
     "tanggal": "15 Jan 2026",
     "warna": "bg-emerald-600"
   },
@@ -11,7 +11,7 @@
     "kategori": "OLAHRAGA",
     "judul": "Turnamen Futsal Barokah",
     "ringkasan": "Menjalin kerukunan antar PC melalui ajang olahraga...",
-    "gambar": "https://ppgwontim4.github.io/database/kegiatan2.jpg",
+    "gambar": "kegiatan2.jpg",
     "tanggal": "02 Feb 2026",
     "warna": "bg-blue-600"
   }
