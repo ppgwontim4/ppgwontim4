@@ -1,0 +1,17 @@
+[
+  {
+    "album": "CAI 2025",
+    "foto": [
+      {"url": "img-galeri/cai-1.jpg", "caption": "Upacara Pembukaan"},
+      {"url": "img-galeri/cai-2.jpg", "caption": "Kegiatan Outbound"},
+      {"url": "https://picsum.photos/800/600?random=1", "caption": "Makan Bersama"}
+    ]
+  },
+  {
+    "album": "Futsal Barokah",
+    "foto": [
+      {"url": "img-galeri/futsal-1.jpg", "caption": "Final Match"},
+      {"url": "https://picsum.photos/800/600?random=2", "caption": "Penyerahan Piala"}
+    ]
+  }
+]
