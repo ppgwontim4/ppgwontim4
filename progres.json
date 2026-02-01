@@ -1,23 +1,19 @@
 [
   {
-    "bidang": "Kurikulum",
-    "proker": "Munaqosah Santri Semester 1",
-    "persen": 85,
-    "status": "Sedang Berlangsung",
-    "warna": "bg-emerald-500"
+    "nama_bidang": "Kurikulum",
+    "warna": "bg-emerald-500",
+    "daftar_proker": [
+      { "nama": "Penyusunan Silabus Semester 1", "persen": 100, "status": "Selesai" },
+      { "nama": "Munaqosah Santri", "persen": 45, "status": "Berjalan" },
+      { "nama": "Pengadaan Buku Prestasi", "persen": 10, "status": "Perencanaan" }
+    ]
   },
   {
-    "bidang": "Seni & Olahraga",
-    "proker": "Turnamen Futsal Barokah",
-    "persen": 100,
-    "status": "Selesai",
-    "warna": "bg-blue-500"
-  },
-  {
-    "bidang": "Keputrian",
-    "proker": "Seminar Tata Boga",
-    "persen": 30,
-    "status": "Perencanaan",
-    "warna": "bg-pink-500"
+    "nama_bidang": "Seni & Olahraga",
+    "warna": "bg-red-500",
+    "daftar_proker": [
+      { "nama": "Latihan ASAD Rutin", "persen": 90, "status": "Berjalan" },
+      { "nama": "Turnamen Futsal", "persen": 0, "status": "Belum Mulai" }
+    ]
   }
 ]
