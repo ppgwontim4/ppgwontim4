@@ -134,7 +134,73 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // 1. GANTI INI: Gunakan URL yang sama dengan di halaman 'keuanganbendahara'
+        const DATA_SOURCE_URL = "https://script.google.com/macros/s/AKfycby7_0Kk1PAjAJh59siBdMZLZctndG4higD5s2WWgkU70AIsX6Eo9zAc5aJ1NxzuhEjS/exec";
 
+        async function fetchSmartData() {
+            try {
+                const response = await fetch(DATA_SOURCE_URL);
+                const res = await response.json(); // Jika sumbernya JSON
+                
+                // Jika sumbernya CSV, gunakan logika parsing CSV milikmu di sini
+                // Untuk contoh ini, saya asumsikan format 'res' sama dengan yang kamu kirim tadi
+                renderData(res);
+            } catch (error) {
+                console.error("Gagal sinkronisasi data:", error);
+                document.getElementById('saldo-kas').innerText = "Koneksi Bermasalah";
+            }
+        }
+
+    function renderData(res) {
+    // 1. Hitung Saldo Akhir
+    const totalM = res.totalMasuk || 0;
+    const totalK = res.totalKeluar || 0;
+    const saldoAkhir = totalM - totalK;
+
+    // 2. Update Angka di Widget Depan
+    // Pastikan di HTML kamu ada ID 'saldo-kas'
+    document.getElementById('saldo-kas').innerText = 'Rp ' + saldoAkhir.toLocaleString('id-ID');
+    
+    // Update Ringkasan Masuk/Keluar jika ada
+    if(document.getElementById('txtTotalMasuk')) {
+        document.getElementById('txtTotalMasuk').innerText = 'Rp ' + totalM.toLocaleString('id-ID');
+    }
+
+    // 3. Update Progress Bar (Visualisasi)
+    // Kita asumsikan target atau distribusi operasional
+    const persenKeluar = (totalK / totalM) * 100;
+    const barOperasional = document.getElementById('bar-operasional');
+    if(barOperasional) {
+        barOperasional.style.width = Math.min(persenKeluar, 100) + '%';
+    }
+
+    // 4. Grafik Sumber Dana (Donut) - Menampilkan Koin vs KK
+    const ctxPie = document.getElementById('chartPie');
+    if (ctxPie) {
+        if (window.myChartPie) window.myChartPie.destroy();
+        window.myChartPie = new Chart(ctxPie, {
+            type: 'doughnut',
+            data: {
+                labels: ['Koin', 'KK'],
+                datasets: [{ 
+                    data: [res.pie.koin, res.pie.kk], 
+                    backgroundColor: ['#f1c40f', '#3498db'],
+                    borderWidth: 0
+                }]
+            },
+            options: { 
+                responsive: true, 
+                maintainAspectRatio: false,
+                cutout: '70%',
+                plugins: { legend: { position: 'bottom' } }
+            }
+        });
+    }
+}
+</script>
 </body>
 
 </html>
+
