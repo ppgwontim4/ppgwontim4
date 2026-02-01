@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bidang Organisasi | PPG Wonogiri Timur 4</title>
+    <title>Struktur & Proker | PPG Wonogiri Timur 4</title>
     
     <link rel="icon" href="https://ppgwontim4.github.io/database/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,16 +11,17 @@
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         .bg-ppg { background: linear-gradient(135deg, #065f46 0%, #064e3b 100%); }
-        .glass-card { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+        .card-bidang { transition: all 0.3s ease; border: 1px solid #f1f5f9; }
+        .card-bidang:hover { transform: translateY(-5px); border-color: #10b981; shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
-    <nav class="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+    <nav class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2 text-emerald-700 font-bold hover:text-emerald-900 transition">
+            <a href="index.html" class="flex items-center gap-2 text-emerald-700 font-bold hover:text-emerald-900 transition text-sm uppercase tracking-wider">
                 <i class="fas fa-arrow-left"></i> Kembali ke Beranda
             </a>
             <img src="https://ppgwontim4.github.io/database/logo.png" class="w-8 h-8 object-contain" alt="Logo">
@@ -29,71 +30,225 @@
 
     <header class="bg-ppg py-20 px-6 text-center text-white">
         <div class="max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tight">Struktur & Bidang Kerja</h1>
-            <p class="text-emerald-100/80 text-lg">Mengenal tugas pokok dan fungsi setiap departemen dalam PPG Wonogiri Timur 4.</p>
+            <h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tight">Struktur & Program Kerja</h1>
+            <p class="text-emerald-100/80 text-lg">Mengenal susunan pengurus dan rencana aksi PPG Wonogiri Timur 4.</p>
         </div>
     </header>
 
-    <main class="max-w-5xl mx-auto py-16 px-6 space-y-8">
+    <main class="max-w-6xl mx-auto py-16 px-6">
         
-        <div class="bg-white rounded-[2rem] p-8 md:p-12 shadow-sm border border-slate-100 flex flex-col md:flex-row gap-10 items-start">
-            <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-[1.5rem] flex items-center justify-center text-3xl shrink-0 shadow-inner">
-                <i class="fas fa-graduation-cap"></i>
+        <section class="mb-24">
+            <div class="text-center mb-12">
+                <h2 class="text-xs font-black uppercase tracking-[0.3em] text-emerald-600">Executive Committee</h2>
+                <div class="h-1 w-20 bg-emerald-500 mx-auto mt-2 rounded-full"></div>
             </div>
-            <div>
-                <h2 class="text-3xl font-black text-slate-900 mb-4 uppercase italic">Bidang Pendidikan & Dakwah</h2>
-                <p class="text-slate-500 leading-relaxed mb-8">Bertanggung jawab penuh atas kualitas kegiatan belajar mengajar (KBM). Fokus pada pengembangan kurikulum santri, standarisasi bacaan Al-Qur'an dan Hadist, serta peningkatan kompetensi metodik para pengajar.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm font-bold uppercase tracking-wider text-emerald-700">
-                    <div class="flex items-center gap-3 bg-emerald-50 p-4 rounded-2xl">
-                        <i class="fas fa-check-circle"></i> Munaqosah Santri
-                    </div>
-                    <div class="flex items-center gap-3 bg-emerald-50 p-4 rounded-2xl">
-                        <i class="fas fa-check-circle"></i> Workshop Guru
-                    </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                <div class="bg-emerald-900 text-white p-8 rounded-[2.5rem] text-center shadow-xl flex flex-col justify-center">
+                    <span class="text-emerald-400 text-[10px] font-black uppercase tracking-widest mb-4 block">Dewan Pembina</span>
+                    <h3 class="text-xl font-bold">Nama Pembina 1</h3>
+                    <div class="h-px bg-emerald-800 my-4 w-1/2 mx-auto"></div>
+                    <h3 class="text-xl font-bold">Nama Pembina 2</h3>
+                </div>
+
+                <div class="bg-white p-10 rounded-[2.5rem] text-center shadow-2xl border border-emerald-100 md:scale-110 relative z-10 flex flex-col justify-center">
+                    <span class="text-emerald-600 text-[10px] font-black uppercase tracking-widest mb-4 block">Top Management</span>
+                    <p class="text-slate-400 text-xs font-bold uppercase mb-1">Ketua</p>
+                    <h3 class="text-2xl font-black text-slate-900 mb-6">Nama Ketua Utama</h3>
+                    <div class="h-px bg-slate-100 my-4"></div>
+                    <p class="text-slate-400 text-xs font-bold uppercase mb-1">Wakil Ketua</p>
+                    <h3 class="text-xl font-bold text-slate-700">Nama Wakil Ketua</h3>
+                </div>
+
+                <div class="bg-emerald-900 text-white p-8 rounded-[2.5rem] text-center shadow-xl flex flex-col justify-center">
+                    <span class="text-emerald-400 text-[10px] font-black uppercase tracking-widest mb-4 block">Administrasi Pusat</span>
+                    <p class="text-emerald-500/50 text-[10px] uppercase font-bold mb-1">Sekretaris Utama</p>
+                    <h3 class="text-lg font-bold">Nama Sekretaris</h3>
+                    <div class="h-px bg-emerald-800 my-4 w-1/2 mx-auto"></div>
+                    <p class="text-emerald-500/50 text-[10px] uppercase font-bold mb-1">Bendahara Utama</p>
+                    <h3 class="text-lg font-bold">Nama Bendahara</h3>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="bg-white rounded-[2rem] p-8 md:p-12 shadow-sm border border-slate-100 flex flex-col md:flex-row gap-10 items-start">
-            <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-[1.5rem] flex items-center justify-center text-3xl shrink-0 shadow-inner">
-                <i class="fas fa-running"></i>
-            </div>
-            <div>
-                <h2 class="text-3xl font-black text-slate-900 mb-4 uppercase italic">Bidang Pemuda & Olahraga</h2>
-                <p class="text-slate-500 leading-relaxed mb-8">Wadah pembinaan karakter melalui kegiatan fisik, kemandirian, dan hobi. Bertujuan mempererat kerukunan, kekompakan, dan kerja sama yang baik antar generus di wilayah Wonogiri Timur 4.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm font-bold uppercase tracking-wider text-blue-700">
-                    <div class="flex items-center gap-3 bg-blue-50 p-4 rounded-2xl">
-                        <i class="fas fa-mountain"></i> Cinta Alam Indonesia
-                    </div>
-                    <div class="flex items-center gap-3 bg-blue-50 p-4 rounded-2xl">
-                        <i class="fas fa-trophy"></i> Turnamen Barokah
-                    </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <div class="card-bidang bg-white p-8 rounded-[2rem] flex flex-col h-full shadow-sm">
+                <div class="flex items-center gap-4 mb-6 text-emerald-600">
+                    <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center"><i class="fas fa-file-alt text-xl"></i></div>
+                    <h3 class="text-xl font-black uppercase italic">Kesekretariatan</h3>
+                </div>
+                <div class="flex-grow">
+                    <p class="text-[10px] font-black text-emerald-600 uppercase mb-3">Program Kerja:</p>
+                    <ul class="text-xs text-slate-500 space-y-2 mb-8">
+                        <li><i class="fas fa-check mr-2 text-emerald-500"></i>Digitalisasi Database Generus</li>
+                        <li><i class="fas fa-check mr-2 text-emerald-500"></i>Manajemen Arsip Surat & Dokumen</li>
+                    </ul>
+                </div>
+                <div class="pt-6 border-t border-slate-50">
+                    <p class="text-[9px] font-bold text-slate-400 uppercase mb-2">Person In Charge:</p>
+                    <p class="text-sm font-bold text-slate-700 mb-1">Nama Pengurus 1</p>
+                    <p class="text-sm font-bold text-slate-700">Nama Pengurus 2</p>
                 </div>
             </div>
-        </div>
 
-        <div class="bg-white rounded-[2rem] p-8 md:p-12 shadow-sm border border-slate-100 flex flex-col md:flex-row gap-10 items-start">
-            <div class="w-20 h-20 bg-pink-100 text-pink-600 rounded-[1.5rem] flex items-center justify-center text-3xl shrink-0 shadow-inner">
-                <i class="fas fa-heart"></i>
-            </div>
-            <div>
-                <h2 class="text-3xl font-black text-slate-900 mb-4 uppercase italic">Bidang Keputrian</h2>
-                <p class="text-slate-500 leading-relaxed mb-8">Fokus pada pembinaan karakter khusus putri, memberikan bekal keterampilan rumah tangga, etika, serta kemandirian ekonomi bagi generus putri.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm font-bold uppercase tracking-wider text-pink-700">
-                    <div class="flex items-center gap-3 bg-pink-50 p-4 rounded-2xl">
-                        <i class="fas fa-utensils"></i> Kelas Keterampilan
-                    </div>
-                    <div class="flex items-center gap-3 bg-pink-50 p-4 rounded-2xl">
-                        <i class="fas fa-female"></i> Kajian Keputrian
-                    </div>
+            <div class="card-bidang bg-white p-8 rounded-[2rem] flex flex-col h-full shadow-sm">
+                <div class="flex items-center gap-4 mb-6 text-blue-600">
+                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center"><i class="fas fa-wallet text-xl"></i></div>
+                    <h3 class="text-xl font-black uppercase italic">Bendahara</h3>
+                </div>
+                <div class="flex-grow">
+                    <p class="text-[10px] font-black text-blue-600 uppercase mb-3">Program Kerja:</p>
+                    <ul class="text-xs text-slate-500 space-y-2 mb-8">
+                        <li><i class="fas fa-check mr-2 text-blue-500"></i>Laporan Transparansi Keuangan Bulanan</li>
+                        <li><i class="fas fa-check mr-2 text-blue-500"></i>Audit Kas Rutin PAC</li>
+                    </ul>
+                </div>
+                <div class="pt-6 border-t border-slate-50">
+                    <p class="text-[9px] font-bold text-slate-400 uppercase mb-2">Person In Charge:</p>
+                    <p class="text-sm font-bold text-slate-700 mb-1">Nama Pengurus 1</p>
+                    <p class="text-sm font-bold text-slate-700">Nama Pengurus 2</p>
                 </div>
             </div>
-        </div>
 
+            <div class="card-bidang bg-white p-8 rounded-[2rem] flex flex-col h-full shadow-sm">
+                <div class="flex items-center gap-4 mb-6 text-amber-600">
+                    <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center"><i class="fas fa-coins text-xl"></i></div>
+                    <h3 class="text-xl font-black uppercase italic">Penggalang Dana</h3>
+                </div>
+                <div class="flex-grow">
+                    <p class="text-[10px] font-black text-amber-600 uppercase mb-3">Program Kerja:</p>
+                    <ul class="text-xs text-slate-500 space-y-2 mb-8">
+                        <li><i class="fas fa-check mr-2 text-amber-500"></i>Optimalisasi Kotak Amal Barokah</li>
+                        <li><i class="fas fa-check mr-2 text-amber-500"></i>Pengembangan Unit Ekonomi Mandiri</li>
+                    </ul>
+                </div>
+                <div class="pt-6 border-t border-slate-50">
+                    <p class="text-[9px] font-bold text-slate-400 uppercase mb-2">Person In Charge:</p>
+                    <p class="text-sm font-bold text-slate-700 mb-1">Nama Pengurus 1</p>
+                    <p class="text-sm font-bold text-slate-700">Nama Pengurus 2</p>
+                </div>
+            </div>
+
+            <div class="card-bidang bg-white p-8 rounded-[2rem] flex flex-col h-full shadow-sm">
+                <div class="flex items-center gap-4 mb-6 text-emerald-600">
+                    <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center"><i class="fas fa-book text-xl"></i></div>
+                    <h3 class="text-xl font-black uppercase italic">Kurikulum</h3>
+                </div>
+                <div class="flex-grow">
+                    <p class="text-[10px] font-black text-emerald-600 uppercase mb-3">Program Kerja:</p>
+                    <ul class="text-xs text-slate-500 space-y-2 mb-8">
+                        <li><i class="fas fa-check mr-2 text-emerald-500"></i>Penyusunan Silabus Semesteran</li>
+                        <li><i class="fas fa-check mr-2 text-emerald-500"></i>Evaluasi Target Capaian Materi</li>
+                    </ul>
+                </div>
+                <div class="pt-6 border-t border-slate-50">
+                    <p class="text-[9px] font-bold text-slate-400 uppercase mb-2">Person In Charge:</p>
+                    <p class="text-sm font-bold text-slate-700 mb-1">Nama Pengurus 1</p>
+                    <p class="text-sm font-bold text-slate-700">Nama Pengurus 2</p>
+                </div>
+            </div>
+
+            <div class="card-bidang bg-white p-8 rounded-[2rem] flex flex-col h-full shadow-sm">
+                <div class="flex items-center gap-4 mb-6 text-indigo-600">
+                    <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center"><i class="fas fa-user-graduate text-xl"></i></div>
+                    <h3 class="text-xl font-black uppercase italic">Tenaga Pendidik</h3>
+                </div>
+                <div class="flex-grow">
+                    <p class="text-[10px] font-black text-indigo-600 uppercase mb-3">Program Kerja:</p>
+                    <ul class="text-xs text-slate-500 space-y-2 mb-8">
+                        <li><i class="fas fa-check mr-2 text-indigo-500"></i>Workshop Metodik & Retorika Guru</li>
+                        <li><i class="fas fa-check mr-2 text-indigo-500"></i>Monitoring & Evaluasi KBM</li>
+                    </ul>
+                </div>
+                <div class="pt-6 border-t border-slate-50">
+                    <p class="text-[9px] font-bold text-slate-400 uppercase mb-2">Person In Charge:</p>
+                    <p class="text-sm font-bold text-slate-700 mb-1">Nama Pengurus 1</p>
+                    <p class="text-sm font-bold text-slate-700">Nama Pengurus 2</p>
+                </div>
+            </div>
+
+            <div class="card-bidang bg-white p-8 rounded-[2rem] flex flex-col h-full shadow-sm">
+                <div class="flex items-center gap-4 mb-6 text-cyan-600">
+                    <div class="w-12 h-12 bg-cyan-50 rounded-xl flex items-center justify-center"><i class="fas fa-heart text-xl"></i></div>
+                    <h3 class="text-xl font-black uppercase italic">Tahfidz</h3>
+                </div>
+                <div class="flex-grow">
+                    <p class="text-[10px] font-black text-cyan-600 uppercase mb-3">Program Kerja:</p>
+                    <ul class="text-xs text-slate-500 space-y-2 mb-8">
+                        <li><i class="fas fa-check mr-2 text-cyan-500"></i>Program Setoran Hafalan Rutin</li>
+                        <li><i class="fas fa-check mr-2 text-cyan-500"></i>Wisuda Tahfidz Akhir Tahun</li>
+                    </ul>
+                </div>
+                <div class="pt-6 border-t border-slate-50">
+                    <p class="text-[9px] font-bold text-slate-400 uppercase mb-2">Person In Charge:</p>
+                    <p class="text-sm font-bold text-slate-700 mb-1">Nama Pengurus 1</p>
+                    <p class="text-sm font-bold text-slate-700">Nama Pengurus 2</p>
+                </div>
+            </div>
+
+            <div class="card-bidang bg-white p-8 rounded-[2rem] flex flex-col h-full shadow-sm">
+                <div class="flex items-center gap-4 mb-6 text-slate-600">
+                    <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center"><i class="fas fa-building text-xl"></i></div>
+                    <h3 class="text-xl font-black uppercase italic">Sarana Prasarana</h3>
+                </div>
+                <div class="flex-grow">
+                    <p class="text-[10px] font-black text-slate-600 uppercase mb-3">Program Kerja:</p>
+                    <ul class="text-xs text-slate-500 space-y-2 mb-8">
+                        <li><i class="fas fa-check mr-2 text-slate-500"></i>Inventarisasi Aset & Alat Peraga</li>
+                        <li><i class="fas fa-check mr-2 text-slate-500"></i>Pemeliharaan Fasilitas Gedung KBM</li>
+                    </ul>
+                </div>
+                <div class="pt-6 border-t border-slate-50">
+                    <p class="text-[9px] font-bold text-slate-400 uppercase mb-2">Person In Charge:</p>
+                    <p class="text-sm font-bold text-slate-700 mb-1">Nama Pengurus 1</p>
+                    <p class="text-sm font-bold text-slate-700">Nama Pengurus 2</p>
+                </div>
+            </div>
+
+            <div class="card-bidang bg-white p-8 rounded-[2rem] flex flex-col h-full shadow-sm">
+                <div class="flex items-center gap-4 mb-6 text-red-600">
+                    <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center"><i class="fas fa-futbol text-xl"></i></div>
+                    <h3 class="text-xl font-black uppercase italic">Seni & Olahraga</h3>
+                </div>
+                <div class="flex-grow">
+                    <p class="text-[10px] font-black text-red-600 uppercase mb-3">Program Kerja:</p>
+                    <ul class="text-xs text-slate-500 space-y-2 mb-8">
+                        <li><i class="fas fa-check mr-2 text-red-500"></i>Latihan Persinas ASAD Rutin</li>
+                        <li><i class="fas fa-check mr-2 text-red-500"></i>Turnamen Futsal & Badminton</li>
+                    </ul>
+                </div>
+                <div class="pt-6 border-t border-slate-50">
+                    <p class="text-[9px] font-bold text-slate-400 uppercase mb-2">Person In Charge:</p>
+                    <p class="text-sm font-bold text-slate-700 mb-1">Nama Pengurus 1</p>
+                    <p class="text-sm font-bold text-slate-700">Nama Pengurus 2</p>
+                </div>
+            </div>
+
+            <div class="card-bidang bg-white p-8 rounded-[2rem] flex flex-col h-full shadow-sm md:col-span-2">
+                <div class="flex items-center gap-4 mb-6 text-pink-600">
+                    <div class="w-12 h-12 bg-pink-50 rounded-xl flex items-center justify-center"><i class="fas fa-star text-xl"></i></div>
+                    <h3 class="text-xl font-black uppercase italic">Kegiatan Muda-mudi</h3>
+                </div>
+                <div class="flex-grow">
+                    <p class="text-[10px] font-black text-pink-600 uppercase mb-3">Program Kerja:</p>
+                    <ul class="text-xs text-slate-500 space-y-2 mb-8">
+                        <li><i class="fas fa-check mr-2 text-pink-500"></i>Pengajian Akrab Muda-mudi (PAM)</li>
+                        <li><i class="fas fa-check mr-2 text-pink-500"></i>Seminar Kemandirian & Pra-Nikah</li>
+                    </ul>
+                </div>
+                <div class="pt-6 border-t border-slate-50">
+                    <p class="text-[9px] font-bold text-slate-400 uppercase mb-2">Person In Charge:</p>
+                    <p class="text-sm font-bold text-slate-700 mb-1">Nama Pengurus 1</p>
+                    <p class="text-sm font-bold text-slate-700">Nama Pengurus 2</p>
+                </div>
+            </div>
+
+        </div>
     </main>
 
-    <footer class="bg-slate-900 text-slate-500 py-12 px-6 text-center border-t border-slate-800">
-        <p class="text-[10px] uppercase tracking-[0.3em]">&copy; 2026 PPG Wonogiri Timur 4</p>
+    <footer class="py-12 text-center text-slate-400 text-[10px] uppercase tracking-[0.4em] border-t border-slate-200">
+        &copy; 2026 PPG Wonogiri Timur 4 | Profesional Religius
     </footer>
 
 </body>
