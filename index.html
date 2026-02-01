@@ -9,10 +9,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+        
+        /* Animasi Slide dari Kanan */
+        #navMenu {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(100%);
+        }
+        #navMenu.active {
+            transform: translateX(0);
+        }
+        
+        /* Overlay Gelap saat Menu Terbuka */
+        #menuBackdrop {
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        #menuBackdrop.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
         .bg-ppg { background: linear-gradient(135deg, #065f46 0%, #064e3b 100%); }
-        .news-card { transition: all 0.3s ease; }
-        .news-card:hover { transform: translateY(-10px); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -21,7 +39,7 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <img src="https://ppgwontim4.github.io/database/logo.png" class="w-8 h-8 object-contain">
-                <span class="font-black text-slate-800 tracking-tighter text-sm uppercase whitespace-nowrap">PPG Wontim 4</span>
+                <span class="font-black text-slate-800 tracking-tighter text-sm uppercase">PPG Wontim 4</span>
             </div>
 
             <div class="hidden md:flex items-center gap-8">
@@ -30,31 +48,45 @@
                 <a href="progres.html" class="text-xs font-bold uppercase tracking-widest text-slate-600 hover:text-emerald-600 transition">Progres</a>
                 <a href="galeri.html" class="text-xs font-bold uppercase tracking-widest text-slate-600 hover:text-emerald-600 transition">Galeri</a>
                 <div class="h-4 w-px bg-slate-200"></div>
-                <a href="https://ppgwontim4.github.io/database" target="_blank" class="text-xs font-bold uppercase tracking-widest text-emerald-600 hover:text-emerald-700">Database</a>
-                <a href="https://ppgwontim4.github.io/keuanganbendahara" target="_blank" class="text-xs font-bold uppercase tracking-widest text-blue-600 hover:text-blue-700">Keuangan</a>
+                <a href="https://ppgwontim4.github.io/database" target="_blank" class="text-xs font-bold uppercase tracking-widest text-emerald-600">Database</a>
             </div>
 
-            <button onclick="toggleMenu()" class="md:hidden bg-emerald-50 text-emerald-700 p-2.5 rounded-xl hover:bg-emerald-100 transition">
-                <i class="fas fa-bars text-xl"></i>
+            <button onclick="openMenu()" class="md:hidden text-emerald-700 p-2">
+                <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
     </nav>
 
-    <div id="navMenu" class="fixed inset-0 bg-slate-900/98 z-[1000] hidden flex-col items-center justify-center p-10">
-        <button onclick="toggleMenu()" class="absolute top-6 right-6 text-white/50 hover:text-white text-3xl transition">
-            <i class="fas fa-times"></i>
-        </button>
+    <div id="menuBackdrop" onclick="closeMenu()" class="fixed inset-0 bg-slate-900/40 z-[1000] opacity-0 transition-opacity"></div>
 
-        <div class="flex flex-col items-center gap-8">
-            <a href="index.html" onclick="toggleMenu()" class="text-white text-2xl font-black uppercase tracking-widest hover:text-emerald-400 transition">Berita</a>
-            <a href="bidang.html" onclick="toggleMenu()" class="text-white text-2xl font-black uppercase tracking-widest hover:text-emerald-400 transition">Bidang</a>
-            <a href="progres.html" onclick="toggleMenu()" class="text-white text-2xl font-black uppercase tracking-widest hover:text-emerald-400 transition">Progres</a>
-            <a href="galeri.html" onclick="toggleMenu()" class="text-white text-2xl font-black uppercase tracking-widest hover:text-emerald-400 transition">Galeri</a>
-            
-            <div class="h-px w-20 bg-white/10 my-2"></div>
+    <div id="navMenu" class="fixed top-0 right-0 h-full w-3/4 max-w-sm bg-white z-[1001] shadow-2xl flex flex-col">
+        <div class="p-6 border-b flex justify-between items-center">
+            <span class="font-bold text-xs uppercase tracking-widest text-slate-400">Navigasi</span>
+            <button onclick="closeMenu()" class="text-slate-900 p-2">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
 
-            <a href="https://ppgwontim4.github.io/database" target="_blank" class="text-emerald-400 font-bold uppercase tracking-widest">Database</a>
-            <a href="https://ppgwontim4.github.io/keuanganbendahara" target="_blank" class="text-blue-400 font-bold uppercase tracking-widest">Keuangan</a>
+        <div class="flex flex-col p-6 gap-2">
+            <a href="index.html" class="flex items-center gap-4 p-4 rounded-2xl hover:bg-emerald-50 text-slate-700 font-bold transition">
+                <i class="fas fa-home text-emerald-600"></i> Berita
+            </a>
+            <a href="bidang.html" class="flex items-center gap-4 p-4 rounded-2xl hover:bg-emerald-50 text-slate-700 font-bold transition">
+                <i class="fas fa-users text-emerald-600"></i> Bidang
+            </a>
+            <a href="progres.html" class="flex items-center gap-4 p-4 rounded-2xl hover:bg-emerald-50 text-slate-700 font-bold transition">
+                <i class="fas fa-chart-line text-emerald-600"></i> Progres
+            </a>
+            <a href="galeri.html" class="flex items-center gap-4 p-4 rounded-2xl hover:bg-emerald-50 text-slate-700 font-bold transition">
+                <i class="fas fa-images text-emerald-600"></i> Galeri
+            </a>
+            <hr class="my-4 border-slate-100">
+            <a href="https://ppgwontim4.github.io/database" target="_blank" class="flex items-center gap-4 p-4 rounded-2xl bg-emerald-50 text-emerald-700 font-bold">
+                <i class="fas fa-database"></i> Database
+            </a>
+            <a href="https://ppgwontim4.github.io/keuanganbendahara" target="_blank" class="flex items-center gap-4 p-4 rounded-2xl bg-blue-50 text-blue-700 font-bold">
+                <i class="fas fa-wallet"></i> Keuangan
+            </a>
         </div>
     </div>
 
@@ -136,6 +168,20 @@
     </div>
 
     <script>
+        // Fungsi Membuka Menu
+        function openMenu() {
+            document.getElementById('navMenu').classList.add('active');
+            document.getElementById('menuBackdrop').classList.add('active');
+            document.body.style.overflow = 'hidden'; // Kunci scroll
+        }
+
+        // Fungsi Menutup Menu
+        function closeMenu() {
+            document.getElementById('navMenu').classList.remove('active');
+            document.getElementById('menuBackdrop').classList.remove('active');
+            document.body.style.overflow = 'auto'; // Aktifkan scroll
+        }
+        
         let dataBeritaGlobal = [];
 
         // Fungsi Memuat Berita dari JSON
@@ -220,4 +266,5 @@
     </script>
 </body>
 </html>
+
 
