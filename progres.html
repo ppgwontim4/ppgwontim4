@@ -28,10 +28,9 @@
         <p class="text-emerald-100/80">Pantau sejauh mana pelaksanaan program kerja setiap bidang secara real-time.</p>
     </header>
 
-    <main class="max-w-4xl mx-auto py-16 px-6">
-        <div id="container-progres" class="space-y-8">
-            <p class="text-center text-slate-400">Memuat data monitoring...</p>
-        </div>
+   <main class="max-w-4xl mx-auto py-16 px-6">
+        <div id="container-progres" class="space-y-12">
+            </div>
     </main>
 
     <script>
@@ -42,22 +41,33 @@
                 const container = document.getElementById('container-progres');
                 container.innerHTML = '';
 
-                data.forEach(item => {
+                data.forEach(bidang => {
+                    let prokerHtml = '';
+                    
+                    // Loop untuk setiap proker dalam satu bidang
+                    bidang.daftar_proker.forEach(p => {
+                        prokerHtml += `
+                            <div class="mb-6">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-bold text-slate-700">${p.nama}</span>
+                                    <span class="text-xs font-black text-slate-400">${p.persen}%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                    <div class="${bidang.warna} h-full transition-all duration-1000" style="width: ${p.persen}%"></div>
+                                </div>
+                                <p class="text-[9px] uppercase tracking-widest mt-1 font-bold text-slate-400">${p.status}</p>
+                            </div>
+                        `;
+                    });
+
+                    // Masukkan ke dalam card Bidang
                     container.innerHTML += `
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                            <div class="flex justify-between items-end mb-4">
-                                <div>
-                                    <span class="text-[10px] font-black text-emerald-600 uppercase tracking-widest">${item.bidang}</span>
-                                    <h3 class="text-lg font-bold text-slate-800">${item.proker}</h3>
-                                </div>
-                                <div class="text-right">
-                                    <span class="text-2xl font-black text-slate-900">${item.persen}%</span>
-                                    <p class="text-[10px] font-bold text-slate-400 uppercase">${item.status}</p>
-                                </div>
-                            </div>
-                            <div class="w-full bg-slate-100 h-4 rounded-full overflow-hidden">
-                                <div class="${item.warna} h-full transition-all duration-1000" style="width: ${item.persen}%"></div>
-                            </div>
+                        <div class="bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100">
+                            <h2 class="text-xl font-black text-slate-900 mb-8 flex items-center gap-3">
+                                <span class="w-2 h-8 ${bidang.warna} rounded-full"></span>
+                                BIDANG ${bidang.nama_bidang.toUpperCase()}
+                            </h2>
+                            ${prokerHtml}
                         </div>
                     `;
                 });
