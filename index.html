@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil PPG Wonogiri Timur 4</title>
+    
     <link rel="icon" href="https://ppgwontim4.github.io/database/logo.png">
     <meta property="og:title" content="Website Profil PPG Wonogiri Timur 4">
     <meta property="og:description" content="Pusat informasi dan transparansi kegiatan generus Wonogiri Timur 4.">
     <meta property="og:image" content="https://ppgwontim4.github.io/database/preview.JPG">
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil PPG Wonogiri Timur 4</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .glass-card { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -21,120 +25,104 @@
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <div class="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center text-white">
+                <div class="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center text-white shadow-lg">
                     <i class="fas fa-mosque"></i>
                 </div>
                 <span class="font-bold text-xl tracking-tight text-emerald-800">PPG Wonogiri Timur 4</span>
             </div>
             <div class="hidden md:flex space-x-8 font-medium">
                 <a href="#profil" class="hover:text-emerald-600 transition">Profil</a>
-                <a href="#program" class="hover:text-emerald-600 transition">Program</a>
-                <a href="#keuangan" class="hover:text-emerald-600 transition">Keuangan</a>
-                <a href="#" class="bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 transition shadow-lg shadow-emerald-200">Portal Admin</a>
+                <a href="/keuanganbendahara" class="hover:text-emerald-600 transition">Keuangan</a>
+                <a href="/database" class="bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 transition">Database</a>
             </div>
         </div>
     </nav>
 
     <header class="relative bg-emerald-900 py-24 px-6 overflow-hidden">
-        <div class="max-w-7xl mx-auto relative z-10 text-center md:text-left flex flex-col md:flex-row items-center">
-            <div class="md:w-2/3">
+        <div class="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center">
+            <div class="md:w-2/3 text-center md:text-left">
                 <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
                     Membina Generasi <br> <span class="text-emerald-400">Profesional Religius</span>
                 </h1>
-                <p class="text-emerald-100 text-lg md:text-xl mb-10 max-w-xl leading-relaxed">
-                    Wadah pembinaan karakter dan kemandirian generus di wilayah Wonogiri Timur 4 menuju masa depan yang cerah dan barokah.
+                <p class="text-emerald-100 text-lg mb-10 max-w-xl">
+                    Sistem informasi terpadu untuk pengelolaan data warga dan transparansi keuangan PPG Wonogiri Timur 4.
                 </p>
                 <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                    <a href="#profil" class="bg-white text-emerald-900 px-8 py-4 rounded-xl font-bold hover:bg-emerald-50 transition">Tentang Kami</a>
-                    <a href="#keuangan" class="bg-emerald-700 text-white px-8 py-4 rounded-xl font-bold hover:bg-emerald-800 transition border border-emerald-500">Cek Transparansi</a>
+                    <a href="#keuangan" class="bg-white text-emerald-900 px-8 py-4 rounded-xl font-bold hover:shadow-xl transition">Cek Saldo Kas</a>
                 </div>
             </div>
-        </div>
-        <div class="absolute right-0 bottom-0 opacity-10 w-1/3">
-            <i class="fas fa-pattern text-[300px] text-white"></i>
         </div>
     </header>
 
-    <section class="max-w-5xl mx-auto -mt-12 relative z-20 px-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 text-center">
-                <p class="text-sm uppercase tracking-widest text-gray-400 font-bold mb-2">Total Generus</p>
-                <h3 class="text-4xl font-black text-emerald-600">1,240+</h3>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 text-center">
-                <p class="text-sm uppercase tracking-widest text-gray-400 font-bold mb-2">Tenaga Pendidik</p>
-                <h3 class="text-4xl font-black text-emerald-600">45</h3>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 text-center">
-                <p class="text-sm uppercase tracking-widest text-gray-400 font-bold mb-2">Titik Sambung</p>
-                <h3 class="text-4xl font-black text-emerald-600">12</h3>
-            </div>
-        </div>
-    </section>
-
-    <section id="keuangan" class="max-w-7xl mx-auto py-24 px-6">
-        <div class="flex flex-col md:flex-row gap-12 items-center">
-            <div class="md:w-1/2">
-                <span class="text-emerald-600 font-bold tracking-widest uppercase text-sm">Transparansi</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6 text-gray-900">Laporan Keuangan Terbuka</h2>
-                <p class="text-gray-600 leading-relaxed mb-8">
-                    Sebagai bentuk amanah organisasi, kami menyajikan ringkasan kas secara real-time yang diambil langsung dari database internal kami.
-                </p>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-4 p-4 bg-emerald-50 rounded-xl">
-                        <i class="fas fa-chart-line text-emerald-600 text-xl"></i>
-                        <div>
-                            <p class="text-sm text-gray-500">Update Terakhir</p>
-                            <p class="font-bold text-gray-800">1 Februari 2026</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="keuangan" class="max-w-7xl mx-auto py-20 px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
-            <div class="md:w-1/2 w-full">
-                <div class="bg-white p-8 rounded-3xl shadow-2xl border-4 border-emerald-500">
-                    <h4 class="text-center text-gray-500 font-medium mb-2">Saldo Kas Terkini</h4>
-                    <h2 class="text-center text-4xl font-black text-emerald-700 mb-8">Rp 12.450.000</h2>
-                    
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-sm font-semibold">Operasional</span>
-                                <span class="text-sm text-gray-500">60%</span>
+            <div class="lg:col-span-2 bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
+                <div class="flex justify-between items-start mb-8">
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-900">Ringkasan Kas Organisasi</h2>
+                        <p class="text-gray-500 text-sm">Update otomatis dari sistem bendahara</p>
+                    </div>
+                    <div class="bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                        Real-Time
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <p class="text-gray-400 font-medium mb-1 uppercase text-xs tracking-widest">Saldo Saat Ini</p>
+                        <h3 id="saldo-kas" class="text-5xl font-black text-emerald-700 mb-6">Rp 0</h3>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-500">Pemasukan</span>
+                                    <span id="txtTotalMasuk" class="font-bold text-emerald-600">Rp 0</span>
+                                </div>
+                                <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+                                    <div id="bar-masuk" class="bg-emerald-500 h-full" style="width: 0%"></div>
+                                </div>
                             </div>
-                            <div class="w-full bg-gray-100 h-3 rounded-full overflow-hidden">
-                                <div class="bg-emerald-500 h-full w-[60%]"></div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-500">Pengeluaran</span>
+                                    <span id="txtTotalKeluar" class="font-bold text-red-600">Rp 0</span>
+                                </div>
+                                <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+                                    <div id="bar-keluar" class="bg-red-500 h-full" style="width: 0%"></div>
+                                </div>
                             </div>
                         </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-sm font-semibold">Kegiatan Generus</span>
-                                <span class="text-sm text-gray-500">30%</span>
-                            </div>
-                            <div class="w-full bg-gray-100 h-3 rounded-full overflow-hidden">
-                                <div class="bg-blue-500 h-full w-[30%]"></div>
-                            </div>
-                        </div>
-                        <button class="w-full mt-6 py-4 bg-gray-900 text-white rounded-xl font-bold hover:bg-black transition">
-                            Unduh Laporan Lengkap (PDF)
-                        </button>
+                    </div>
+
+                    <div class="h-64 relative">
+                        <canvas id="chartPie"></canvas>
                     </div>
                 </div>
             </div>
+
+            <div class="bg-emerald-800 p-8 rounded-3xl text-white shadow-xl flex flex-col justify-between">
+                <div>
+                    <i class="fas fa-info-circle text-3xl text-emerald-400 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-4">Transparansi Dana</h4>
+                    <p class="text-emerald-100 text-sm leading-relaxed mb-6">
+                        Data ini ditarik langsung dari database bendahara pusat Wonogiri Timur 4. Klik tombol di bawah untuk melihat rincian transaksi lengkap.
+                    </p>
+                </div>
+                <a href="/keuanganbendahara" class="w-full py-4 bg-emerald-700 hover:bg-emerald-600 rounded-xl text-center font-bold transition border border-emerald-500">
+                    Buka Laporan Detail
+                </a>
+            </div>
+
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-gray-400 py-12 px-6">
+    <footer class="bg-gray-900 text-gray-500 py-12 px-6 border-t border-gray-800">
         <div class="max-w-7xl mx-auto text-center">
-            <p class="mb-4">&copy; 2026 PPG Wonogiri Timur 4. All rights reserved.</p>
-            <div class="flex justify-center gap-6 text-xl">
-                <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-white"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="hover:text-white"><i class="fab fa-whatsapp"></i></a>
-            </div>
+            <p>&copy; 2026 PPG Wonogiri Timur 4. Terintegrasi dengan Google Sheets API.</p>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script>
         // 1. GANTI INI: Gunakan URL yang sama dengan di halaman 'keuanganbendahara'
         const DATA_SOURCE_URL = "https://script.google.com/macros/s/AKfycby7_0Kk1PAjAJh59siBdMZLZctndG4higD5s2WWgkU70AIsX6Eo9zAc5aJ1NxzuhEjS/exec";
@@ -153,54 +141,44 @@
             }
         }
 
-    function renderData(res) {
-    // 1. Hitung Saldo Akhir
-    const totalM = res.totalMasuk || 0;
-    const totalK = res.totalKeluar || 0;
-    const saldoAkhir = totalM - totalK;
+        function renderData(res) {
+            const totalM = res.totalMasuk || 0;
+            const totalK = res.totalKeluar || 0;
+            const saldo = totalM - totalK;
 
-    // 2. Update Angka di Widget Depan
-    // Pastikan di HTML kamu ada ID 'saldo-kas'
-    document.getElementById('saldo-kas').innerText = 'Rp ' + saldoAkhir.toLocaleString('id-ID');
-    
-    // Update Ringkasan Masuk/Keluar jika ada
-    if(document.getElementById('txtTotalMasuk')) {
-        document.getElementById('txtTotalMasuk').innerText = 'Rp ' + totalM.toLocaleString('id-ID');
-    }
+            // Update Angka
+            document.getElementById('saldo-kas').innerText = 'Rp ' + saldo.toLocaleString('id-ID');
+            document.getElementById('txtTotalMasuk').innerText = 'Rp ' + totalM.toLocaleString('id-ID');
+            document.getElementById('txtTotalKeluar').innerText = 'Rp ' + totalK.toLocaleString('id-ID');
 
-    // 3. Update Progress Bar (Visualisasi)
-    // Kita asumsikan target atau distribusi operasional
-    const persenKeluar = (totalK / totalM) * 100;
-    const barOperasional = document.getElementById('bar-operasional');
-    if(barOperasional) {
-        barOperasional.style.width = Math.min(persenKeluar, 100) + '%';
-    }
+            // Update Bar (Visual sederhana)
+            const totalTransaksi = totalM + totalK;
+            document.getElementById('bar-masuk').style.width = ((totalM / totalTransaksi) * 100) + '%';
+            document.getElementById('bar-keluar').style.width = ((totalK / totalTransaksi) * 100) + '%';
 
-    // 4. Grafik Sumber Dana (Donut) - Menampilkan Koin vs KK
-    const ctxPie = document.getElementById('chartPie');
-    if (ctxPie) {
-        if (window.myChartPie) window.myChartPie.destroy();
-        window.myChartPie = new Chart(ctxPie, {
-            type: 'doughnut',
-            data: {
-                labels: ['Koin', 'KK'],
-                datasets: [{ 
-                    data: [res.pie.koin, res.pie.kk], 
-                    backgroundColor: ['#f1c40f', '#3498db'],
-                    borderWidth: 0
-                }]
-            },
-            options: { 
-                responsive: true, 
-                maintainAspectRatio: false,
-                cutout: '70%',
-                plugins: { legend: { position: 'bottom' } }
-            }
-        });
-    }
-}
-</script>
+            // Donut Chart: Sumber Dana (Koin vs KK)
+            const ctxPie = document.getElementById('chartPie').getContext('2d');
+            new Chart(ctxPie, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Koin', 'KK'],
+                    datasets: [{
+                        data: [res.pie.koin, res.pie.kk],
+                        backgroundColor: ['#f1c40f', '#3498db'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '75%',
+                    plugins: { legend: { position: 'bottom', labels: { color: '#666' } } }
+                }
+            });
+        }
+
+        // Jalankan saat halaman dibuka
+        window.onload = fetchSmartData;
+    </script>
 </body>
-
 </html>
-
