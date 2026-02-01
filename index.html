@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PPG Wonogiri Timur 4 | Portal Kegiatan</title>
+    <title>PPG Wonogiri Timur 4 | Portal Resmi</title>
     
     <link rel="icon" href="https://ppgwontim4.github.io/database/logo.png">
-    <meta property="og:title" content="Website Resmi PPG Wonogiri Timur 4">
-    <meta property="og:description" content="Informasi kegiatan, dokumentasi, dan transparansi generus Wonogiri Timur 4.">
-    <meta property="og:image" content="https://ppgwontim4.github.io/database/preview.jpg">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .bg-gradient-soft { background: linear-gradient(135deg, #065f46 0%, #064e3b 100%); }
-        .news-card:hover img { transform: scale(1.05); transition: transform 0.5s ease; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .bg-ppg { background: linear-gradient(135deg, #065f46 0%, #064e3b 100%); }
+        .news-card { transition: all 0.3s ease; }
+        .news-card:hover { transform: translateY(-10px); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -26,119 +23,129 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <img src="https://ppgwontim4.github.io/database/logo.png" class="w-10 h-10 object-contain" alt="Logo">
-                <span class="font-bold text-lg tracking-tight text-emerald-900 hidden sm:block uppercase">PPG WONOGIRI TIMUR 4</span>
+                <span class="font-bold text-lg text-emerald-900 uppercase tracking-tighter">PPG Wontim 4</span>
             </div>
-            <div class="flex space-x-6 items-center font-semibold text-sm">
-                <a href="#berita" class="text-slate-600 hover:text-emerald-600">Berita</a>
-                <a href="/keuanganbendahara" class="text-slate-600 hover:text-emerald-600">Laporan Kas</a>
-                <a href="/database" class="bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 shadow-md transition">Database</a>
+            <div class="hidden md:flex space-x-8 items-center font-bold text-sm text-slate-600 uppercase tracking-wide">
+                <a href="bidang.html" class="hover:text-emerald-600 transition">Bidang</a>
+                <a href="#berita" class="hover:text-emerald-600 transition">Berita</a>
+                <a href="/keuanganbendahara" class="hover:text-emerald-600 transition">Keuangan</a>
+                <a href="/database" class="bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 shadow-lg transition">Database</a>
+            </div>
+            <div class="md:hidden text-emerald-900 text-2xl">
+                <i class="fas fa-bars"></i>
             </div>
         </div>
     </nav>
 
-    <header class="bg-gradient-soft pt-20 pb-32 px-6 text-center text-white">
-        <div class="max-w-4xl mx-auto">
-            <span class="bg-emerald-500/20 text-emerald-300 text-xs font-bold px-4 py-1 rounded-full uppercase tracking-widest border border-emerald-500/30">Official Portal</span>
-            <h1 class="text-4xl md:text-6xl font-extrabold mt-6 leading-tight">Mewujudkan Generus <br>Profesional Religius</h1>
-            <p class="text-emerald-100/80 mt-6 text-lg max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
-                Wadah informasi terpadu untuk koordinasi, dokumentasi kegiatan, dan transparansi organisasi PPG Wonogiri Timur 4.
+    <header class="bg-ppg pt-24 pb-40 px-6 text-center text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <span class="bg-emerald-400/20 text-emerald-300 text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-[0.2em] border border-emerald-400/30">Official Website</span>
+            <h1 class="text-4xl md:text-7xl font-extrabold leading-tight mt-6 italic">Membina Generus <br>Profesional Religius</h1>
+            <p class="text-emerald-100/70 mt-8 text-lg max-w-2xl mx-auto leading-relaxed font-light">
+                Pusat kendali informasi, pengorganisasian bidang kerja, dan dokumentasi kegiatan PPG Wonogiri Timur 4.
             </p>
         </div>
+        <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl"></div>
     </header>
 
-    <section class="max-w-6xl mx-auto -mt-16 px-6">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100 text-center">
-                <p class="text-slate-400 text-xs font-bold uppercase tracking-wider">Total Kelompok</p>
-                <h4 class="text-2xl font-black text-emerald-700 mt-1">23</h4>
+    <section id="bidang" class="max-w-6xl mx-auto -mt-20 px-6 relative z-20">
+        <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl shadow-emerald-900/10 border border-slate-100 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="text-center md:text-left">
+                <h3 class="text-2xl md:text-3xl font-black text-slate-900">Struktur & Program Kerja</h3>
+                <p class="text-slate-500 mt-2 max-w-md">Pelajari tupoksi setiap bidang mulai dari Pendidikan, Keputrian, hingga Pemuda & Olahraga.</p>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100 text-center">
-                <p class="text-slate-400 text-xs font-bold uppercase tracking-wider">Total Generus</p>
-                <h4 class="text-2xl font-black text-emerald-700 mt-1">354</h4>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100 text-center">
-                <p class="text-slate-400 text-xs font-bold uppercase tracking-wider">Total Tendik</p>
-                <h4 class="text-2xl font-black text-emerald-700 mt-1">100</h4>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100 text-center">
-                <p class="text-slate-400 text-xs font-bold uppercase tracking-wider">Program</p>
-                <h4 class="text-2xl font-black text-emerald-700 mt-1">24+</h4>
-            </div>
+            <a href="bidang.html" class="group bg-emerald-600 text-white px-10 py-5 rounded-2xl font-black hover:bg-emerald-700 transition-all flex items-center gap-4 shadow-xl shadow-emerald-600/20">
+                EKSPLORASI BIDANG 
+                <i class="fas fa-chevron-right group-hover:translate-x-1 transition"></i>
+            </a>
         </div>
     </section>
 
     <section id="berita" class="max-w-7xl mx-auto py-24 px-6">
-    
-        <div class="mb-12">
-            <h2 class="text-3xl font-black text-slate-900 uppercase">Warta Kegiatan</h2>
-            <div class="h-1.5 w-20 bg-emerald-500 mt-2 rounded-full"></div>
-        </div>
-    
-        <div id="container-berita" class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="flex flex-col md:flex-row justify-between items-center mb-16 gap-4">
+            <div class="text-center md:text-left">
+                <h2 class="text-4xl font-black text-slate-900 tracking-tighter uppercase">Kabar Terbaru</h2>
+                <div class="h-1.5 w-24 bg-emerald-500 mt-3 rounded-full mx-auto md:mx-0"></div>
             </div>
-    
+            <p class="text-slate-400 text-sm font-medium italic">Update terakhir: Februari 2026</p>
+        </div>
+
+        <div id="container-berita" class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="col-span-full text-center py-20">
+                <div class="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-emerald-600 mb-4"></div>
+                <p class="text-slate-400 font-bold uppercase tracking-widest text-xs">Menyelaraskan Data...</p>
+            </div>
+        </div>
     </section>
 
-    <footer class="bg-slate-900 text-white py-16 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
-            <div class="text-center md:text-left">
-                <h5 class="text-2xl font-black text-emerald-500 uppercase">PPG WONTIM 4</h5>
-                <p class="text-slate-400 mt-2 text-sm">Satu Visi, Satu Misi, Membina Generasi.</p>
+    <footer class="bg-slate-900 py-20 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <img src="https://ppgwontim4.github.io/database/logo.png" class="w-16 h-16 mx-auto mb-8 grayscale brightness-200 opacity-50" alt="Logo">
+            <h5 class="text-white font-black text-2xl tracking-widest uppercase">PPG WONOGIRI TIMUR 4</h5>
+            <div class="flex justify-center gap-8 my-8 text-slate-500">
+                <a href="#" class="hover:text-emerald-500 transition text-xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-emerald-500 transition text-xl"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="hover:text-emerald-500 transition text-xl"><i class="fab fa-whatsapp"></i></a>
             </div>
-            <div class="flex gap-6 text-2xl">
-                <a href="#" class="hover:text-emerald-500 transition"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-emerald-500 transition"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="hover:text-emerald-500 transition"><i class="fab fa-facebook"></i></a>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto border-t border-slate-800 mt-12 pt-8 text-center text-slate-500 text-xs uppercase tracking-widest">
-            &copy; 2026 PPG Wonogiri Timur 4. All rights reserved.
+            <div class="h-px w-full bg-slate-800 mb-8"></div>
+            <p class="text-slate-500 text-[10px] font-bold tracking-[0.3em] uppercase">
+                &copy; 2026 Lembaga PPG Wonogiri Timur 4. All rights reserved.
+            </p>
         </div>
     </footer>
+
     <script>
-    async function muatBerita() {
-        // Cukup panggil nama filenya saja karena berada di folder yang sama
-        const URL_JSON = "berita.json"; 
+        async function muatBerita() {
+            // Membaca file berita.json di repository yang sama
+            const URL_JSON = "berita.json"; 
 
-        try {
-            const response = await fetch(URL_JSON);
-            const data = await response.json();
-            
-            const container = document.getElementById('container-berita');
-            container.innerHTML = ''; 
+            try {
+                const response = await fetch(URL_JSON);
+                if (!response.ok) throw new Error("Data tidak ditemukan");
+                const data = await response.json();
+                
+                const container = document.getElementById('container-berita');
+                container.innerHTML = ''; 
 
-            data.forEach(item => {
-                container.innerHTML += `
-                    <article class="news-card bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col h-full">
-                        <div class="h-52 overflow-hidden relative">
-                            <img src="img-berita/${item.gambar}" class="w-full h-full object-cover" alt="Foto">
-                            <div class="absolute top-4 left-4">
-                                <span class="${item.warna} text-white text-[10px] font-bold px-3 py-1 rounded-lg uppercase shadow-lg">
-                                    ${item.kategori}
-                                </span>
+                data.forEach(item => {
+                    // Cek apakah link gambar internal atau external
+                    const linkGambar = item.gambar.startsWith('http') ? item.gambar : `img-berita/${item.gambar}`;
+                    
+                    container.innerHTML += `
+                        <article class="news-card bg-white rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 flex flex-col h-full">
+                            <div class="h-60 overflow-hidden relative">
+                                <img src="${linkGambar}" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x300?text=Gambar+Berita'">
+                                <div class="absolute top-5 left-5">
+                                    <span class="${item.warna || 'bg-emerald-600'} text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
+                                        ${item.kategori}
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="p-8 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold leading-tight">${item.judul}</h3>
-                            <p class="text-slate-500 text-sm mt-4 line-clamp-3 mb-6">${item.ringkasan}</p>
-                            <div class="mt-auto pt-6 border-t border-slate-50 flex justify-between items-center text-slate-400 text-[11px] font-bold">
-                                <span><i class="far fa-calendar-alt mr-2"></i>${item.tanggal}</span>
-                                <i class="fas fa-arrow-right text-emerald-500 text-lg"></i>
+                            <div class="p-8 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold text-slate-900 leading-tight mb-4 group-hover:text-emerald-600 transition">
+                                    ${item.judul}
+                                </h3>
+                                <p class="text-slate-500 text-sm leading-relaxed mb-6 line-clamp-3">
+                                    ${item.ringkasan}
+                                </p>
+                                <div class="mt-auto pt-6 border-t border-slate-50 flex justify-between items-center text-slate-400 font-bold text-[10px] uppercase tracking-widest">
+                                    <span><i class="far fa-calendar-alt mr-2 text-emerald-500"></i>${item.tanggal}</span>
+                                    <span class="text-emerald-600">Detail <i class="fas fa-arrow-right ml-1"></i></span>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                `;
-            });
-        } catch (error) {
-            console.error("Gagal memuat berita:", error);
+                        </article>
+                    `;
+                });
+            } catch (error) {
+                console.error("Error:", error);
+                document.getElementById('container-berita').innerHTML = `
+                    <div class="col-span-full bg-red-50 text-red-600 p-6 rounded-2xl border border-red-100 text-center font-bold">
+                        Gagal memuat berita. Pastikan file berita.json sudah ada.
+                    </div>`;
+            }
         }
-    }
-    window.onload = muatBerita;
-</script>
 
+        window.onload = muatBerita;
+    </script>
 </body>
 </html>
-
-
-
-
