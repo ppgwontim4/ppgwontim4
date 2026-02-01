@@ -134,19 +134,28 @@
             const berita = semuaBerita[index];
             const modal = document.getElementById('newsModal');
             
-            // Isi konten modal
-            document.getElementById('modalGambar').src = berita.gambar.startsWith('http') ? berita.gambar : `img-berita/${berita.gambar}`;
+            // Set Gambar
+            const imgElement = document.getElementById('modalGambar');
+            imgElement.src = berita.gambar.startsWith('http') ? berita.gambar : `img-berita/${berita.gambar}`;
+            
+            // Set Judul & Tanggal
             document.getElementById('modalJudul').innerText = berita.judul;
             document.getElementById('modalTanggal').querySelector('span').innerText = berita.tanggal;
-            document.getElementById('modalKategori').innerText = berita.kategori;
-            document.getElementById('modalKategori').className = `${berita.warna || 'bg-emerald-600'} text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest text-white shadow-lg inline-block mb-6`;
             
-            // Gunakan isi berita jika ada, jika tidak gunakan ringkasan
-            document.getElementById('modalIsi').innerHTML = berita.isi_lengkap || berita.ringkasan;
+            // Set Kategori & Warna
+            const katBadge = document.getElementById('modalKategori');
+            katBadge.innerText = berita.kategori;
+            katBadge.className = `${berita.warna || 'bg-emerald-600'} text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest text-white shadow-lg inline-block mb-6`;
+            
+            // LOGIKA UNTUK ISI LENGKAP (Penting!)
+            const isiKonten = berita.isi_lengkap || berita.ringkasan;
+            
+            // Jika isi_lengkap mengandung baris baru, ubah \n menjadi <br> agar rapi
+            document.getElementById('modalIsi').innerHTML = isiKonten.replace(/\n/g, '<br>');
         
             // Tampilkan modal
             modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Kunci scroll layar utama
+            document.body.style.overflow = 'hidden'; // Kunci scroll
         }
         
         function tutupModal() {
@@ -180,6 +189,7 @@
 </div>
 </body>
 </html>
+
 
 
 
