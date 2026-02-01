@@ -98,7 +98,7 @@
     <script>
     async function muatBerita() {
         try {
-            const response = await fetch('https://ppgwontim4.github.io/database/berita.json');
+            const response = await fetch('https://ppgwontim4.github.io/ppgwontim4/berita.json');
             const data = await response.json();
             const container = document.getElementById('container-berita');
             container.innerHTML = ''; // Bersihkan kontainer
@@ -131,5 +131,6 @@
 
 </body>
 </html>
+
 
 
