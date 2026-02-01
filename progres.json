@@ -1,0 +1,23 @@
+[
+  {
+    "bidang": "Kurikulum",
+    "proker": "Munaqosah Santri Semester 1",
+    "persen": 85,
+    "status": "Sedang Berlangsung",
+    "warna": "bg-emerald-500"
+  },
+  {
+    "bidang": "Seni & Olahraga",
+    "proker": "Turnamen Futsal Barokah",
+    "persen": 100,
+    "status": "Selesai",
+    "warna": "bg-blue-500"
+  },
+  {
+    "bidang": "Keputrian",
+    "proker": "Seminar Tata Boga",
+    "persen": 30,
+    "status": "Perencanaan",
+    "warna": "bg-pink-500"
+  }
+]
