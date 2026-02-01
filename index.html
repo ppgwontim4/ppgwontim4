@@ -96,56 +96,64 @@
     </footer>
 
     <script>
-        async function muatBerita() {
-            // Membaca file berita.json di repository yang sama
-            const URL_JSON = "berita.json"; 
+        let semuaBerita = []; // Simpan data global untuk diakses modal
 
+        async function muatBerita() {
             try {
-                const response = await fetch(URL_JSON);
-                if (!response.ok) throw new Error("Data tidak ditemukan");
-                const data = await response.json();
+                const response = await fetch("berita.json");
+                semuaBerita = await response.json(); // Simpan ke variabel global
                 
                 const container = document.getElementById('container-berita');
                 container.innerHTML = ''; 
-
-                data.forEach(item => {
-                    // Cek apakah link gambar internal atau external
+        
+                semuaBerita.forEach((item, index) => {
                     const linkGambar = item.gambar.startsWith('http') ? item.gambar : `img-berita/${item.gambar}`;
                     
                     container.innerHTML += `
-                        <article class="news-card bg-white rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 flex flex-col h-full">
+                        <article onclick="bukaModal(${index})" class="news-card bg-white rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 flex flex-col h-full cursor-pointer">
                             <div class="h-60 overflow-hidden relative">
-                                <img src="${linkGambar}" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x300?text=Gambar+Berita'">
+                                <img src="${linkGambar}" class="w-full h-full object-cover">
                                 <div class="absolute top-5 left-5">
-                                    <span class="${item.warna || 'bg-emerald-600'} text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
+                                    <span class="${item.warna || 'bg-emerald-600'} text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">
                                         ${item.kategori}
                                     </span>
                                 </div>
                             </div>
-                            <div class="p-8 flex flex-col flex-grow">
-                                <h3 class="text-xl font-bold text-slate-900 leading-tight mb-4 group-hover:text-emerald-600 transition">
-                                    ${item.judul}
-                                </h3>
-                                <p class="text-slate-500 text-sm leading-relaxed mb-6 line-clamp-3">
-                                    ${item.ringkasan}
-                                </p>
-                                <div class="mt-auto pt-6 border-t border-slate-50 flex justify-between items-center text-slate-400 font-bold text-[10px] uppercase tracking-widest">
-                                    <span><i class="far fa-calendar-alt mr-2 text-emerald-500"></i>${item.tanggal}</span>
-                                    <span class="text-emerald-600">Detail <i class="fas fa-arrow-right ml-1"></i></span>
-                                </div>
+                            <div class="p-8">
+                                <h3 class="text-xl font-bold text-slate-900 leading-tight mb-4">${item.judul}</h3>
+                                <p class="text-slate-500 text-sm line-clamp-3 mb-6">${item.ringkasan}</p>
+                                <span class="text-emerald-600 font-bold text-[10px] uppercase tracking-widest">Baca Selengkapnya →</span>
                             </div>
                         </article>
                     `;
                 });
-            } catch (error) {
-                console.error("Error:", error);
-                document.getElementById('container-berita').innerHTML = `
-                    <div class="col-span-full bg-red-50 text-red-600 p-6 rounded-2xl border border-red-100 text-center font-bold">
-                        Gagal memuat berita. Pastikan file berita.json sudah ada.
-                    </div>`;
-            }
+            } catch (e) { console.error(e); }
         }
-
+        
+        function bukaModal(index) {
+            const berita = semuaBerita[index];
+            const modal = document.getElementById('newsModal');
+            
+            // Isi konten modal
+            document.getElementById('modalGambar').src = berita.gambar.startsWith('http') ? berita.gambar : `img-berita/${berita.gambar}`;
+            document.getElementById('modalJudul').innerText = berita.judul;
+            document.getElementById('modalTanggal').querySelector('span').innerText = berita.tanggal;
+            document.getElementById('modalKategori').innerText = berita.kategori;
+            document.getElementById('modalKategori').className = `${berita.warna || 'bg-emerald-600'} text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest text-white shadow-lg inline-block mb-6`;
+            
+            // Gunakan isi berita jika ada, jika tidak gunakan ringkasan
+            document.getElementById('modalIsi').innerHTML = berita.isi_lengkap || berita.ringkasan;
+        
+            // Tampilkan modal
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Kunci scroll layar utama
+        }
+        
+        function tutupModal() {
+            document.getElementById('newsModal').classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Aktifkan scroll kembali
+        }
+        
         window.onload = muatBerita;
     </script>
     <div id="newsModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
@@ -172,6 +180,7 @@
 </div>
 </body>
 </html>
+
 
 
 
