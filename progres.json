@@ -1,19 +1,90 @@
 [
   {
-    "nama_bidang": "Kurikulum",
+    "nama_bidang": "Kesekretariatan",
     "warna": "bg-emerald-500",
     "daftar_proker": [
-      { "nama": "Penyusunan Silabus Semester 1", "persen": 100, "status": "Selesai" },
-      { "nama": "Munaqosah Santri", "persen": 45, "status": "Berjalan" },
-      { "nama": "Pengadaan Buku Prestasi", "persen": 10, "status": "Perencanaan" }
+      { "nama": "Digitalisasi Database Generus", "persen": 0, "status": "Belum Mulai" },
+      { "nama": "Manajemen Arsip Surat", "persen": 0, "status": "Belum Mulai" }
+    ]
+  },
+  {
+    "nama_bidang": "Bendahara",
+    "warna": "bg-blue-500",
+    "daftar_proker": [
+      { "nama": "Laporan Kas Bulanan", "persen": 0, "status": "Belum Mulai" },
+      { "nama": "Audit Transparansi Dana", "persen": 0, "status": "Belum Mulai" }
+    ]
+  },
+  {
+    "nama_bidang": "Penggalang Dana",
+    "warna": "bg-amber-500",
+    "daftar_proker": [
+      { "nama": "Optimalisasi Kotak Amal", "persen": 0, "status": "Belum Mulai" },
+      { "nama": "Pengembangan Ekonomi Mandiri", "persen": 0, "status": "Belum Mulai" }
+    ]
+  },
+  {
+    "nama_bidang": "Kurikulum",
+    "warna": "bg-emerald-600",
+    "daftar_proker": [
+      { "nama": "Penyusunan Silabus Semester", "persen": 0, "status": "Belum Mulai" },
+      { "nama": "Evaluasi Target Capaian", "persen": 0, "status": "Belum Mulai" }
+    ]
+  },
+  {
+    "nama_bidang": "Tenaga Pendidik",
+    "warna": "bg-indigo-500",
+    "daftar_proker": [
+      { "nama": "Workshop Metodik Guru", "persen": 0, "status": "Belum Mulai" },
+      { "nama": "Monitoring KBM", "persen": 0, "status": "Belum Mulai" }
+    ]
+  },
+  {
+    "nama_bidang": "Tahfidz",
+    "warna": "bg-cyan-500",
+    "daftar_proker": [
+      { "nama": "Setoran Hafalan Rutin", "persen": 0, "status": "Belum Mulai" },
+      { "nama": "Wisuda Tahfidz Akhir Tahun", "persen": 0, "status": "Belum Mulai" }
+    ]
+  },
+  {
+    "nama_bidang": "Sarana Prasarana",
+    "warna": "bg-slate-500",
+    "daftar_proker": [
+      { "nama": "Inventarisasi Aset", "persen": 0, "status": "Belum Mulai" },
+      { "nama": "Pemeliharaan Gedung", "persen": 0, "status": "Belum Mulai" }
     ]
   },
   {
     "nama_bidang": "Seni & Olahraga",
     "warna": "bg-red-500",
     "daftar_proker": [
-      { "nama": "Latihan ASAD Rutin", "persen": 90, "status": "Berjalan" },
-      { "nama": "Turnamen Futsal", "persen": 0, "status": "Belum Mulai" }
+      { "nama": "Latihan ASAD Rutin", "persen": 0, "status": "Belum Mulai" },
+      { "nama": "Turnamen Futsal & Badminton", "persen": 0, "status": "Belum Mulai" }
+    ]
+  },
+  {
+    "nama_bidang": "Muda-mudi",
+    "warna": "bg-pink-500",
+    "daftar_proker": [
+      { "nama": "Pengajian Akrab (PAM)", "persen": 0, "status": "Belum Mulai" },
+      { "nama": "Seminar Kemandirian", "persen": 0, "status": "Belum Mulai" }
+    ]
+  },
+  {
+    "nama_bidang": "Keputrian",
+    "warna": "bg-fuchsia-500",
+    "daftar_proker": [
+      { "nama": "Kajian Fiqih Wanita", "persen": 0, "status": "Belum Mulai" },
+      { "nama": "Kelas Keterampilan", "persen": 0, "status": "Belum Mulai" }
+    ]
+  },
+  {
+    "nama_bidang": "Bimbingan Konseling",
+    "warna": "bg-teal-500",
+    "daftar_proker": [
+      { "nama": "Pendampingan Motivasi", "persen": 0, "status": "Belum Mulai" },
+      { "nama": "Mediasi Kendala Pengurus", "persen": 0, "status": "Belum Mulai" }
     ]
   }
 ]
