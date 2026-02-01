@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Kegiatan | PPG Wonogiri Timur 4</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .bg-ppg { background: linear-gradient(135deg, #065f46 0%, #064e3b 100%); }
+        .img-hover { transition: all 0.5s ease; }
+        .img-hover:hover { transform: scale(1.05); filter: brightness(70%); }
+    </style>
+</head>
+<body class="bg-slate-50">
+
+    <nav class="bg-white/80 backdrop-blur-md border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-emerald-700 font-bold uppercase text-sm"><i class="fas fa-arrow-left mr-2"></i>Beranda</a>
+            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Dokumentasi PPG</span>
+        </div>
+    </nav>
+
+    <header class="bg-ppg py-16 px-6 text-center text-white">
+        <h1 class="text-4xl font-black mb-2">Galeri Foto</h1>
+        <p class="text-emerald-100/70">Momen berharga setiap kegiatan generus Wonogiri Timur 4.</p>
+    </header>
+
+    <main id="galeri-container" class="max-w-6xl mx-auto py-12 px-6">
+        </main>
+
+    <script>
+        async function muatGaleri() {
+            try {
+                const res = await fetch('galeri.json');
+                const data = await res.json();
+                const container = document.getElementById('galeri-container');
+                container.innerHTML = '';
+
+                data.forEach(album => {
+                    let fotoHtml = '';
+                    album.foto.forEach(f => {
+                        fotoHtml += `
+                            <div class="group relative overflow-hidden rounded-2xl bg-slate-200 aspect-square cursor-pointer" onclick="viewImage('${f.url}', '${f.caption}')">
+                                <img src="${f.url}" class="w-full h-full object-cover img-hover">
+                                <div class="absolute inset-0 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-t from-black/80 to-transparent">
+                                    <p class="text-white text-xs font-bold">${f.caption}</p>
+                                </div>
+                            </div>
+                        `;
+                    });
+
+                    container.innerHTML += `
+                        <section class="mb-16">
+                            <h2 class="text-2xl font-black text-slate-800 mb-6 flex items-center gap-3 italic">
+                                <span class="w-8 h-1 bg-emerald-500"></span> ${album.album}
+                            </h2>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                ${fotoHtml}
+                            </div>
+                        </section>
+                    `;
+                });
+            } catch (e) { console.error(e); }
+        }
+
+        function viewImage(url, caption) {
+            // Sederhana: buka gambar di tab baru atau buat modal lightbox jika ingin lebih kompleks
+            window.open(url, '_blank');
+        }
+
+        window.onload = muatGaleri;
+    </script>
+</body>
+</html>
