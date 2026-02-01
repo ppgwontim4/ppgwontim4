@@ -1,20 +1,20 @@
 [
   {
-    "kategori": "PEMBINAAN",
     "judul": "Cinta Alam Indonesia (CAI) 2025",
     "ringkasan": "Keseruan generus Wonogiri Timur 4 dalam membina kemandirian...",
     "isi_lengkap": "Keseruan generus Wonogiri Timur 4 dalam membina kemandirian, kedisiplinan, dan ketaatan generus."
-    "gambar": "kegiatan1.jpg",
+    "kategori": "PEMBINAAN",
     "tanggal": "15 Jan 2026",
+    "gambar": "kegiatan1.jpg",
     "warna": "bg-emerald-600"
   },
   {
-    "kategori": "OLAHRAGA",
     "judul": "Turnamen Futsal Barokah",
     "ringkasan": "Menjalin kerukunan antar generus melalui ajang olahraga...",
     "isi_lengkap": "Menjalin kerukunan antar generus melalui ajang olahraga"
-    "gambar": "kegiatan2.jpg",
+    "kategori": "OLAHRAGA",
     "tanggal": "02 Feb 2026",
+    "gambar": "kegiatan2.jpg",
     "warna": "bg-blue-600"
   }
 ]
