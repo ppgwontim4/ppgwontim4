@@ -3,182 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil PPG Wonogiri Timur 4</title>
+    <title>PPG Wonogiri Timur 4 | Portal Kegiatan</title>
     
     <link rel="icon" href="https://ppgwontim4.github.io/database/logo.png">
-    <meta property="og:title" content="Website Profil PPG Wonogiri Timur 4">
-    <meta property="og:description" content="Pusat informasi dan transparansi kegiatan generus Wonogiri Timur 4.">
-    <meta property="og:image" content="https://ppgwontim4.github.io/database/preview.JPG">
+    <meta property="og:title" content="Website Resmi PPG Wonogiri Timur 4">
+    <meta property="og:description" content="Informasi kegiatan, dokumentasi, dan transparansi generus Wonogiri Timur 4.">
+    <meta property="og:image" content="https://ppgwontim4.github.io/database/preview.jpg">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .glass-card { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .bg-gradient-soft { background: linear-gradient(135deg, #065f46 0%, #064e3b 100%); }
+        .news-card:hover img { transform: scale(1.05); transition: transform 0.5s ease; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-slate-50 text-slate-900">
 
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <div class="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center text-white shadow-lg">
-                    <i class="fas fa-mosque"></i>
-                </div>
-                <span class="font-bold text-xl tracking-tight text-emerald-800">PPG Wonogiri Timur 4</span>
+            <div class="flex items-center gap-3">
+                <img src="https://ppgwontim4.github.io/database/logo.png" class="w-10 h-10 object-contain" alt="Logo">
+                <span class="font-bold text-lg tracking-tight text-emerald-900 hidden sm:block uppercase">PPG WONTIM 4</span>
             </div>
-            <div class="hidden md:flex space-x-8 font-medium">
-                <a href="#profil" class="hover:text-emerald-600 transition">Profil</a>
-                <a href="/keuanganbendahara" class="hover:text-emerald-600 transition">Keuangan</a>
-                <a href="/database" class="bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 transition">Database</a>
+            <div class="flex space-x-6 items-center font-semibold text-sm">
+                <a href="#berita" class="text-slate-600 hover:text-emerald-600">Berita</a>
+                <a href="/keuanganbendahara" class="text-slate-600 hover:text-emerald-600">Laporan Kas</a>
+                <a href="/database" class="bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 shadow-md transition">Database</a>
             </div>
         </div>
     </nav>
 
-    <header class="relative bg-emerald-900 py-24 px-6 overflow-hidden">
-        <div class="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center">
-            <div class="md:w-2/3 text-center md:text-left">
-                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
-                    Membina Generasi <br> <span class="text-emerald-400">Profesional Religius</span>
-                </h1>
-                <p class="text-emerald-100 text-lg mb-10 max-w-xl">
-                    Sistem informasi terpadu untuk pengelolaan data warga dan transparansi keuangan PPG Wonogiri Timur 4.
-                </p>
-                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                    <a href="#keuangan" class="bg-white text-emerald-900 px-8 py-4 rounded-xl font-bold hover:shadow-xl transition">Cek Saldo Kas</a>
-                </div>
-            </div>
+    <header class="bg-gradient-soft pt-20 pb-32 px-6 text-center text-white">
+        <div class="max-w-4xl mx-auto">
+            <span class="bg-emerald-500/20 text-emerald-300 text-xs font-bold px-4 py-1 rounded-full uppercase tracking-widest border border-emerald-500/30">Official Portal</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mt-6 leading-tight">Mewujudkan Generus <br>Profesional Religius</h1>
+            <p class="text-emerald-100/80 mt-6 text-lg max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
+                Wadah informasi terpadu untuk koordinasi, dokumentasi kegiatan, dan transparansi organisasi PPG Wonogiri Timur 4.
+            </p>
         </div>
     </header>
 
-    <section id="keuangan" class="max-w-7xl mx-auto py-20 px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
-            <div class="lg:col-span-2 bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
-                <div class="flex justify-between items-start mb-8">
-                    <div>
-                        <h2 class="text-2xl font-bold text-gray-900">Ringkasan Kas Organisasi</h2>
-                        <p class="text-gray-500 text-sm">Update otomatis dari sistem bendahara</p>
-                    </div>
-                    <div class="bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-                        Real-Time
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <p class="text-gray-400 font-medium mb-1 uppercase text-xs tracking-widest">Saldo Saat Ini</p>
-                        <h3 id="saldo-kas" class="text-5xl font-black text-emerald-700 mb-6">Rp 0</h3>
-                        
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between text-sm mb-1">
-                                    <span class="text-gray-500">Pemasukan</span>
-                                    <span id="txtTotalMasuk" class="font-bold text-emerald-600">Rp 0</span>
-                                </div>
-                                <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
-                                    <div id="bar-masuk" class="bg-emerald-500 h-full" style="width: 0%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between text-sm mb-1">
-                                    <span class="text-gray-500">Pengeluaran</span>
-                                    <span id="txtTotalKeluar" class="font-bold text-red-600">Rp 0</span>
-                                </div>
-                                <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
-                                    <div id="bar-keluar" class="bg-red-500 h-full" style="width: 0%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="h-64 relative">
-                        <canvas id="chartPie"></canvas>
-                    </div>
-                </div>
+    <section class="max-w-6xl mx-auto -mt-16 px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100 text-center">
+                <p class="text-slate-400 text-xs font-bold uppercase tracking-wider">Total PC</p>
+                <h4 class="text-2xl font-black text-emerald-700 mt-1">4</h4>
             </div>
-
-            <div class="bg-emerald-800 p-8 rounded-3xl text-white shadow-xl flex flex-col justify-between">
-                <div>
-                    <i class="fas fa-info-circle text-3xl text-emerald-400 mb-4"></i>
-                    <h4 class="text-xl font-bold mb-4">Transparansi Dana</h4>
-                    <p class="text-emerald-100 text-sm leading-relaxed mb-6">
-                        Data ini ditarik langsung dari database bendahara pusat Wonogiri Timur 4. Klik tombol di bawah untuk melihat rincian transaksi lengkap.
-                    </p>
-                </div>
-                <a href="/keuanganbendahara" class="w-full py-4 bg-emerald-700 hover:bg-emerald-600 rounded-xl text-center font-bold transition border border-emerald-500">
-                    Buka Laporan Detail
-                </a>
+            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100 text-center">
+                <p class="text-slate-400 text-xs font-bold uppercase tracking-wider">Total PAC</p>
+                <h4 class="text-2xl font-black text-emerald-700 mt-1">12</h4>
             </div>
-
+            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100 text-center">
+                <p class="text-slate-400 text-xs font-bold uppercase tracking-wider">Program</p>
+                <h4 class="text-2xl font-black text-emerald-700 mt-1">24+</h4>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100 text-center">
+                <p class="text-slate-400 text-xs font-bold uppercase tracking-wider">Status Kas</p>
+                <a href="/keuanganbendahara" class="text-emerald-600 text-xs font-bold underline block mt-2">LIHAT DETAIL</a>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-gray-500 py-12 px-6 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto text-center">
-            <p>&copy; 2026 PPG Wonogiri Timur 4. Terintegrasi dengan Google Sheets API.</p>
+    <section id="berita" class="max-w-7xl mx-auto py-24 px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center mb-16">
+            <div class="text-center md:text-left mb-6 md:mb-0">
+                <h2 class="text-3xl font-black text-slate-900 uppercase">Warta Kegiatan</h2>
+                <div class="h-1.5 w-20 bg-emerald-500 mx-auto md:mx-0 mt-2 rounded-full"></div>
+            </div>
+            <p class="text-slate-500 max-w-md text-sm text-center md:text-right">
+                Dokumentasi terbaru seputar kegiatan pembinaan generus di wilayah Wonogiri Timur 4.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <article class="news-card bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="https://ppgwontim4.github.io/database/kegiatan1.jpg" class="w-full h-full object-cover transition duration-500" alt="CAI">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-emerald-600 text-white text-[10px] font-bold px-3 py-1 rounded-lg uppercase shadow-lg">Pembinaan</span>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold leading-tight hover:text-emerald-700 transition cursor-pointer">Cinta Alam Indonesia (CAI) 2026: Membentuk Karakter Mandiri</h3>
+                    <p class="text-slate-500 text-sm mt-4 line-clamp-3">Kesuksesan perhelatan CAI tahun ini membawa semangat baru bagi kemandirian generus Wonogiri Timur 4 dalam menghadapi tantangan zaman...</p>
+                    <div class="mt-8 flex justify-between items-center">
+                        <span class="text-slate-400 text-xs font-medium"><i class="far fa-calendar-alt mr-2"></i>Jan 15, 2026</span>
+                        <i class="fas fa-chevron-right text-emerald-500"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="https://ppgwontim4.github.io/database/kegiatan2.jpg" class="w-full h-full object-cover transition duration-500" alt="Turnamen">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-lg uppercase shadow-lg">Olahraga</span>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold leading-tight hover:text-emerald-700 transition cursor-pointer">Turnamen Futsal U-20: Menjalin Ukhuwah Melalui Sportivitas</h3>
+                    <p class="text-slate-500 text-sm mt-4 line-clamp-3">Pertemuan rutin bidang pemuda dan olahraga yang kali ini dikemas dalam bentuk kompetisi persahabatan antar PC...</p>
+                    <div class="mt-8 flex justify-between items-center">
+                        <span class="text-slate-400 text-xs font-medium"><i class="far fa-calendar-alt mr-2"></i>Feb 02, 2026</span>
+                        <i class="fas fa-chevron-right text-emerald-500"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="https://ppgwontim4.github.io/database/kegiatan3.jpg" class="w-full h-full object-cover transition duration-500" alt="Munaqosah">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-amber-600 text-white text-[10px] font-bold px-3 py-1 rounded-lg uppercase shadow-lg">Pendidikan</span>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold leading-tight hover:text-emerald-700 transition cursor-pointer">Munaqosah Santri: Mengevaluasi Capaian Target Kurikulum</h3>
+                    <p class="text-slate-500 text-sm mt-4 line-clamp-3">Kegiatan evaluasi rutin untuk memastikan target hafalan dan pemahaman dalil para santri di lingkup Wonogiri Timur 4 tetap terjaga...</p>
+                    <div class="mt-8 flex justify-between items-center">
+                        <span class="text-slate-400 text-xs font-medium"><i class="far fa-calendar-alt mr-2"></i>Feb 10, 2026</span>
+                        <i class="fas fa-chevron-right text-emerald-500"></i>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-16 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="text-center md:text-left">
+                <h5 class="text-2xl font-black text-emerald-500 uppercase">PPG WONTIM 4</h5>
+                <p class="text-slate-400 mt-2 text-sm">Satu Visi, Satu Misi, Membina Generasi.</p>
+            </div>
+            <div class="flex gap-6 text-2xl">
+                <a href="#" class="hover:text-emerald-500 transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-emerald-500 transition"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="hover:text-emerald-500 transition"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-slate-800 mt-12 pt-8 text-center text-slate-500 text-xs uppercase tracking-widest">
+            &copy; 2026 PPG Wonogiri Timur 4. All rights reserved.
         </div>
     </footer>
 
-    <script>
-        // 1. GANTI INI: Gunakan URL yang sama dengan di halaman 'keuanganbendahara'
-        const DATA_SOURCE_URL = "https://script.google.com/macros/s/AKfycby7_0Kk1PAjAJh59siBdMZLZctndG4higD5s2WWgkU70AIsX6Eo9zAc5aJ1NxzuhEjS/exec";
-
-        async function fetchSmartData() {
-            try {
-                const response = await fetch(DATA_SOURCE_URL);
-                const res = await response.json(); // Jika sumbernya JSON
-                
-                // Jika sumbernya CSV, gunakan logika parsing CSV milikmu di sini
-                // Untuk contoh ini, saya asumsikan format 'res' sama dengan yang kamu kirim tadi
-                renderData(res);
-            } catch (error) {
-                console.error("Gagal sinkronisasi data:", error);
-                document.getElementById('saldo-kas').innerText = "Koneksi Bermasalah";
-            }
-        }
-
-        function renderData(res) {
-            const totalM = res.totalMasuk || 0;
-            const totalK = res.totalKeluar || 0;
-            const saldo = totalM - totalK;
-
-            // Update Angka
-            document.getElementById('saldo-kas').innerText = 'Rp ' + saldo.toLocaleString('id-ID');
-            document.getElementById('txtTotalMasuk').innerText = 'Rp ' + totalM.toLocaleString('id-ID');
-            document.getElementById('txtTotalKeluar').innerText = 'Rp ' + totalK.toLocaleString('id-ID');
-
-            // Update Bar (Visual sederhana)
-            const totalTransaksi = totalM + totalK;
-            document.getElementById('bar-masuk').style.width = ((totalM / totalTransaksi) * 100) + '%';
-            document.getElementById('bar-keluar').style.width = ((totalK / totalTransaksi) * 100) + '%';
-
-            // Donut Chart: Sumber Dana (Koin vs KK)
-            const ctxPie = document.getElementById('chartPie').getContext('2d');
-            new Chart(ctxPie, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Koin', 'KK'],
-                    datasets: [{
-                        data: [res.pie.koin, res.pie.kk],
-                        backgroundColor: ['#f1c40f', '#3498db'],
-                        borderWidth: 0
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    cutout: '75%',
-                    plugins: { legend: { position: 'bottom', labels: { color: '#666' } } }
-                }
-            });
-        }
-
-        // Jalankan saat halaman dibuka
-        window.onload = fetchSmartData;
-    </script>
 </body>
 </html>
